@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+}
+
+.email-container {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+  color: white;
+  padding: 60px 40px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.logo-section {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+}
+
+.map-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  margin: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  opacity: 0.9;
+}
+
+.map-caption {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+.content {
+  padding: 50px 40px;
+}
+
+.main-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.rocket {
+  font-size: 28px;
+  margin-left: 8px;
+}
+
+.stats-highlight {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb;
+  padding: 24px;
+  margin: 32px 0;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.country-section {
+  margin: 32px 0;
+}
+
+.country-section h3 {
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.country-item {
+  background: #f8fafc;
+  padding: 16px 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #475569;
+}
+
+.country-item:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px rgba(37, 99, 235, 0.3);
+}
+
+.country-item .fi {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.commitment-section {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 20px;
+  margin: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.commitment-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shine 4s infinite;
+}
+
+.commitment-section h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px 0;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta-text {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px -8px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: none;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -8px rgba(37, 99, 235, 0.5);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.footer {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+  padding: 32px;
+  text-align: center;
+}
+
+.footer-banner {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+.emoji {
+  font-size: 1.2em;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 10px 0;
+  }
+
+  .email-container {
+    margin: 0 10px;
+    border-radius: 20px;
+  }
+
+  .header {
+    padding: 40px 24px 24px;
+  }
+
+  .content {
+    padding: 32px 24px;
+  }
+
+  .logo {
+    max-width: 140px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .country-item {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .cta-text {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 16px 32px;
+    font-size: 15px;
+  }
+}
